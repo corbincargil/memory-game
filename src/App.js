@@ -1,47 +1,8 @@
 import './App.css';
-import React, { useState , useEffect} from "react";
+import Layout from './components/Layout';
 
 function App() {
-  const [color, setColor] = useState('black');
-
-  useEffect(() => {
-    const changeColorOnClick = () => {
-      if (color === 'black') {
-        setColor('red');
-      } else {
-        setColor('black');
-      }
-
-      
-      };
-
-    document.getElementById('myDiv').addEventListener("click", changeColorOnClick);
-    document.title = `The color is ${color}`;
-
-    return () => {
-      document.getElementById('myDiv').removeEventListener("click", changeColorOnClick);
-    };
-  }, [color] );
-
-
-  return(
-    <div>
-      <div
-        id="myDiv"
-        style={{
-          color: "white",
-          width: "100px",
-          height: "100px",
-          position: "absolute",
-          left: "50%",
-          top: "50%",
-          backgroundColor: color,
-        }}
-      >
-        This div can change color. Click on me!
-      </div>
-    </div>
-  )
+  return <Layout />
 }
 
 export default App;
