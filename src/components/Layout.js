@@ -1,5 +1,6 @@
 import React, { useState , useEffect } from 'react';
 import Header from "./Header.js";
+import Display from './Display.js';
 
 
 export default function Layout() {
@@ -11,7 +12,7 @@ export default function Layout() {
     return(
         <div>
             <Header hiScore={hiScore} round={round} score={score}/>
-            {/* <Display /> */}
+            <Display round={round} score={score}/>
             {/* <Footer /> */}
         </div>
     )
