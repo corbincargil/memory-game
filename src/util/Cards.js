@@ -60,7 +60,7 @@ const chuck = characterCard(
 );
 
 const crazy8 = characterCard(
-    'Domingo "Krazy-8" Molina',
+    'Krazy-8',
     crazy8Pic,
     '3'
 );
@@ -144,7 +144,7 @@ const kim = characterCard(
 );
 
 const lalo = characterCard(
-    'Eduardo "Lalo" Salamanca',
+    'Lalo Salamanca',
     laloPic,
     '1'
 );

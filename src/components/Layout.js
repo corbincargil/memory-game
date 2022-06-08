@@ -10,7 +10,7 @@ export default function Layout() {
 
 
     return(
-        <div>
+        <div id='main'>
             <Header hiScore={hiScore} round={round} score={score}/>
             <Display round={round} score={score}/>
             {/* <Footer /> */}
