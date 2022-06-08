@@ -28,6 +28,7 @@ import suzannePic from '../characters/suzanne.webp';
 import tyrusPic from '../characters/tyrus.webp';
 import victorPic from '../characters/victor.webp';
 import wernerPic from '../characters/werner.webp';
+import CardGrid from '../components/CardGrid';
 
 //import shuffle function
 import shuffle from './shuffle';
@@ -41,21 +42,21 @@ const characterCard = (name, pic, tier, id) => {
 const bill = characterCard(
     'Bill Oakley',
     billPic,
-    '3',
+    '4',
     1
 );
 
 const bolsa = characterCard(
     'Juan Bolsa',
     bolsaPic,
-    '2',
+    '3',
     2
 );
 
 const casper = characterCard(
     'Casper',
     casperPic,
-    '3',
+    '4',
     3
 )
 
@@ -69,21 +70,21 @@ const chuck = characterCard(
 const crazy8 = characterCard(
     'Krazy-8',
     crazy8Pic,
-    '3',
+    '4',
     5
 );
 
 const ernesto = characterCard(
     'Ernesto',
     ernestoPic,
-    '3',
+    '4',
     6
 );
 
 const francesca = characterCard(
     'Francesca Liddy',
     francescaPic,
-    '2',
+    '3',
     7
 );
 
@@ -139,21 +140,21 @@ const jimmy = characterCard(
 const joey = characterCard(
     'Joey Dixon',
     joeyPic,
-    '2',
+    '4',
     15
 );
 
 const kai = characterCard(
     'Kai',
     kaiPic,
-    '3',
+    '5',
     16
 );
 
 const kevin = characterCard(
     'Kevin Watchell',
     kevinPic,
-    '2',
+    '3',
     17
 );
 
@@ -174,7 +175,7 @@ const lalo = characterCard(
 const lyle = characterCard(
     'Lyle',
     lylePic,
-    '3',
+    '5',
     20
 );
 
@@ -195,14 +196,14 @@ const nacho = characterCard(
 const nguyen = characterCard(
     'Mrs. Nguyen',
     nguyenPic,
-    '3',
+    '5',
     23
 );
 
 const paige = characterCard(
     'Paige Novick',
     paigePic,
-    '2',
+    '3',
     24
 );
 
@@ -216,14 +217,14 @@ const richard = characterCard(
 const stacey = characterCard(
     'Stacey Ehrmantraut',
     staceyPic,
-    '3',
+    '5',
     26
 );
 
 const suzanne = characterCard(
     'Suzanne Ericsen',
     suzannePic,
-    '3',
+    '5',
     27
 );
 
@@ -237,7 +238,7 @@ const tyrus = characterCard(
 const victor = characterCard(
     'Victor',
     victorPic,
-    '2',
+    '3',
     29
 );
 
@@ -249,12 +250,23 @@ const werner = characterCard(
 );
 
 //alphabetical array of cards
-let cards = [bill, bolsa, casper, chuck, crazy8, ernesto, francesca, gomez, gus, hank, hector, howard, huell, jimmy, joey, kai, kevin, kim, lalo, lyle, mike, nacho, nguyen, paige, richard, stacey, suzanne, tyrus, victor, werner];
+let fullDeck = [bill, bolsa, casper, chuck, crazy8, ernesto, francesca, gomez, gus, hank, hector, howard, huell, jimmy, joey, kai, kevin, kim, lalo, lyle, mike, nacho, nguyen, paige, richard, stacey, suzanne, tyrus, victor, werner];
+
+//filter cards based on round
+const round = 3;
+const deck1 = fullDeck.filter(card => card.tier <= 1);
+const deck2 = fullDeck.filter(card => card.tier <= 2);
+const deck3 = fullDeck.filter(card => card.tier <= 3);
+const deck4 = fullDeck.filter(card => card.tier <= 4);
+const deck5 = fullDeck.filter(card => card.tier <= 5);
 
 //shuffle order of cards
-shuffle(cards);
 
-export default cards;
+export const deckOne = deck1;
+export  const deckTwo = deck2;
+export  const deckThree = deck3;
+export  const deckFour = deck4;
+export const deckFive = deck5;
 
 //Tier 1 characters
 // -Chuck
@@ -269,23 +281,27 @@ export default cards;
 // -Nacho
 
 //Tier 2 characters
-// -Bolsa
-// -Francesca
 // -Gomez
 // -Huell
-// -Kevin
-// -Paige
 // -Richard
 // -Tyrus
-// -Victor
 // -Werner
 
 //Tier 3 characters
+// -Kevin
+// -Francesca
+// -Paige
+// -Victor
+// -Bolsa
+
+//Tier 4 characters
 // -Bill
 // -Casper
 // -Crazy8
 // -Ernesto
 // -Joey
+
+//Tier 5 characters
 // -Kai
 // -Lyle
 // -Nguyen

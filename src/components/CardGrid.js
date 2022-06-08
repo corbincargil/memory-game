@@ -1,9 +1,9 @@
-import cards from '../util/cards';
-import shuffle from '../util/shuffle';
+import selectDeck from '../util/selectDeck';
 
 export default function CardGrid(props) {
     const score = props.score;
     const round = props.round;
+    const cards = selectDeck(round);
 
     return(
         <div className="card-grid">
