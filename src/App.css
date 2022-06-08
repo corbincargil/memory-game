@@ -42,6 +42,7 @@
   flex-direction: column;
   background-color: rgb(246, 238, 0);
   width: 100vw;
+  min-height: 100vh;
 }
 
 .header {
