@@ -13,5 +13,8 @@ function App() {
 //    - Need a comp. to import all card data and export the array info to CardGrid
 //    - The utility comp will be called Cards.js
 //    - Once the cards are in CardGrid.js, display each card as <li/> by using the array.forEach() method in conjuction with conditional statements to control which tiers of cards are displayed (depending on round #)
+// - Randomize displaying of cards after each card clicked
+// - Update score values with each card clicked
+// 
 
 export default App;
