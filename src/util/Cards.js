@@ -63,7 +63,7 @@ const casper = characterCard(
 const chuck = characterCard(
     'Chuck McGill',
     chuckPic,
-    '1',
+    '1.5',
     4
 );
 
@@ -105,14 +105,14 @@ const gus = characterCard(
 const hank = characterCard(
     'Hank Schrader',
     hankPic,
-    '1',
+    '1.5',
     10
 );
 
 const hector = characterCard(
     'Hector Salamanca',
     hectorPic,
-    '1',
+    '1.5',
     11
 );
 
@@ -168,7 +168,7 @@ const kim = characterCard(
 const lalo = characterCard(
     'Lalo Salamanca',
     laloPic,
-    '1',
+    '1.5',
     19
 );
 
@@ -189,7 +189,7 @@ const mike = characterCard(
 const nacho = characterCard(
     'Ignacio "Nacho" Varga',
     nachoPic,
-    '1',
+    '1.5',
     22
 );
 
@@ -253,11 +253,12 @@ const werner = characterCard(
 let fullDeck = [bill, bolsa, casper, chuck, crazy8, ernesto, francesca, gomez, gus, hank, hector, howard, huell, jimmy, joey, kai, kevin, kim, lalo, lyle, mike, nacho, nguyen, paige, richard, stacey, suzanne, tyrus, victor, werner];
 
 //filter cards based on round
-const deck1 = fullDeck.filter(card => card.tier <= 1);
-const deck2 = fullDeck.filter(card => card.tier <= 2);
-const deck3 = fullDeck.filter(card => card.tier <= 3);
-const deck4 = fullDeck.filter(card => card.tier <= 4);
-const deck5 = fullDeck.filter(card => card.tier <= 5);
+const deck1 = fullDeck.filter(card => card.tier == 1);
+const deck2 = fullDeck.filter(card => card.tier == 1.5);
+const deck3 = fullDeck.filter(card => card.tier == 2);
+const deck4 = fullDeck.filter(card => card.tier == 3);
+const deck5 = fullDeck.filter(card => card.tier == 4);
+const deck6 = fullDeck.filter(card => card.tier == 5);
 
 //shuffle order of cards
 
@@ -266,18 +267,23 @@ export  const deckTwo = deck2;
 export  const deckThree = deck3;
 export  const deckFour = deck4;
 export const deckFive = deck5;
+export const deckSix = deck6;
+
 
 //Tier 1 characters
-// -Chuck
 // -Gus
-// -Hank
-// -Hector
 // -Howard
 // -Jimmy
 // -Kim
-// -Lalo
 // -Mike
+
+
+//Tier 1.5 characters
+// -Hank
+// -Hector
 // -Nacho
+// -Lalo
+// -Chuck
 
 //Tier 2 characters
 // -Gomez

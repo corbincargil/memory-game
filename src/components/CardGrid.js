@@ -1,10 +1,18 @@
 import selectDeck from '../util/selectDeck';
 import shuffle from '../util/shuffle';
 import { useState, useEffect } from 'react';
+import{
+    deckOne,
+    deckTwo,
+    deckThree,
+    deckFour,
+    deckFive
+} from '../util/cards';
 
 export default function CardGrid(props) {
     const { hiScore, setHiScore, score, setScore, round, setRound } = props;
     const [cards, setCards] = useState(selectDeck(round));
+    //const [currentCard, setCurrentCard] = useState();
 
     let prevRound = 1;
     let currentCard;
@@ -22,21 +30,20 @@ export default function CardGrid(props) {
     }
 
     const updateScore = () => {
-        setScore(score + 1);
+        setScore(prevScore => prevScore + 1);
     }
 
     //need to fix bug where the updated deck and displayed round are delayed
     const updateRound = () => {
-        if (round == 1 && score > 8) {setRound(round+1);}
-        if (round == 2 && score > 13) {setRound(round+1);}
-        if (round == 3 && score > 18) {setRound(round+1);}
-        if (round == 4 && score > 23) {setRound(round+1);}
-    }
-    const getCounter = (card) => {
-        if (card.id == currentCard) {
-            currentCounter = card.counter
-        }
-        return currentCounter;
+        setRound(prevRound => prevRound + 1);
+        setCards((prevCards) => prevCards.concat(...selectDeck(round+1)));
+        // if (round == 1 && score > 5) {
+        //     setRound(prevRound => prevRound+1);
+        //     setCards((prevCards) => prevCards.concat(deckTwo));
+        // }
+        // if (round == 2 && score > 12) {setRound(round+1);}
+        // if (round == 3 && score > 18) {setRound(round+1);}
+        // if (round == 4 && score > 23) {setRound(round+1);}
     }
 
     const updateCounter = (card) => {
@@ -57,19 +64,24 @@ export default function CardGrid(props) {
         if (currentCard.counter > 1) {
             resetGame();
             return;
-        } else {
-            updateScore();
-            updateRound();
         }
+
+        updateScore();
+        
+        
+            //updateRound();
+        
 
         
 
         setCards(shuffle(cards));
         console.log(cards);
-        prevRound = round;
+        //prevRound = round;
+        //setRound(round);
     }
 
     useEffect(() => {
+        if (round == 1 && score == 5) {updateRound()}
     })
     
     
