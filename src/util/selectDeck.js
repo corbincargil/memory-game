@@ -8,7 +8,7 @@ import{
 import shuffle from './shuffle';
 
 export default function selectDeck(round) {
-    let selectedDeck;
+    let selectedDeck= [];
     if (round == 5) {
         selectedDeck = deckFive;
     } else if (round == 2) {

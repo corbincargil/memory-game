@@ -35,8 +35,8 @@ import shuffle from './shuffle';
 
 
 //factory function to create a card for each character
-const characterCard = (name, pic, tier, id) => {
-    return { pic, name, tier, id};
+const characterCard = (name, pic, tier, id, counter=0) => {
+    return { pic, name, tier, id, counter};
 };
 
 const bill = characterCard(
@@ -253,7 +253,6 @@ const werner = characterCard(
 let fullDeck = [bill, bolsa, casper, chuck, crazy8, ernesto, francesca, gomez, gus, hank, hector, howard, huell, jimmy, joey, kai, kevin, kim, lalo, lyle, mike, nacho, nguyen, paige, richard, stacey, suzanne, tyrus, victor, werner];
 
 //filter cards based on round
-const round = 3;
 const deck1 = fullDeck.filter(card => card.tier <= 1);
 const deck2 = fullDeck.filter(card => card.tier <= 2);
 const deck3 = fullDeck.filter(card => card.tier <= 3);
