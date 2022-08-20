@@ -73,7 +73,7 @@ export default function CardGrid(props) {
                         onClick={handleClick}>
                         <img src={card.pic} alt={card.name}/>
                         <p>{card.name}</p>
-                        <p>{card.counter}</p>
+                        {/* <p>{card.counter}</p> */}
                     </li>
                 ))
             }
