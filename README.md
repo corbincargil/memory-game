@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Memory Game Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description:
 
-## Available Scripts
+This memory game tests the player to see how many Better Call Saul characters they can keep track of, and was made using React.js. The goal of this project was to get comfortable using function components, state, and hooks in React. It was also good practice creating regular Javascript functions to manipulate sets of data (shuffling the card deck, adding more cards to the deck based on the round, etc.) and keeping the code clean and organized using ES6 modules. 
 
-In the project directory, you can run:
 
-### `npm start`
+## Live Preview: 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Use this link to access a live preview of the game:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+https://corbincargil.github.io/memory-game/
 
-### `npm test`
+### `Instructions:`
+1) Click on as many character cards in a row as you can without clicking on any of them more than once. 
+2) Each time a card is clicked, the deck is shuffled.
+3) Every 5 points, a new round is started and 5 more character cards are added to the deck. 
+4) Can you get to the end of the deck by completing all 6 rounds and clicking on 30 characters in a row? Give it a shot! 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Lessons Learned: 
+* Solidified fundaments of using hooks to pass state between function components based on user interactions (current score, round #, hi-score, adding cards to the deck, etc.)
+* Practice writing clean, organized code across multiple folders/files in a way that is easy for others to read and understand
+* Further practice implementing ES6 Modules
+* Building a React project from scratch and creating function components
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Features: 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Deck shuffles after any card is clicked
+* Scoreboard at the top tracks the current score, round #, and the high score
+* New round started every 5 points, for a total of 6 rounds
+* 30 total characters
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `Round 1:`
+![Screen Shot 2022-08-20 at 12 29 03 PM](https://user-images.githubusercontent.com/100732012/185759269-c7a0c4fd-ce5a-4044-89e3-15a4b295aac7.png)
 
-### `npm run eject`
+### `Game being played on round 4:`
+![Screen Shot 2022-08-20 at 12 31 12 PM](https://user-images.githubusercontent.com/100732012/185759351-648642f8-f80d-41df-8404-8bed5fdbe03d.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* React.js
+* HTML, CSS, JavaScript
+* Git, GitHub, & GH-Pages
+* Chrome dev. tools
+* MacOS Terminal
+* VS Code
+* Google & YouTube
